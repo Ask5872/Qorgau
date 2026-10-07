@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "checks": [
+    "Real calibration requests DOM full screen, native full screen, stable viewport, then starts; first target is acknowledged only after two painted animation frames with geometry",
+    "Each new target moves to server coordinates and receives one acknowledgement; repeated polling does not relabel or duplicate it, and controls avoid top targets",
+    "Preparation calibration does not intercept Alt+Tab, copy or Windows keys and creates no exam violation events",
+    "Only server-confirmed calibrated completion closes both fullscreen layers and advertises readiness",
+    "Esc immediately removes the surface, restores native window and leaves key handling free even if server cancellation fails",
+    "Network failure restores the ordinary window before server cancellation and offers retry with an honest failure message",
+    "Display geometry changes invalidate the in-progress calibration instead of labelling frames against displaced targets",
+    "Denied full screen never starts real calibration or reports success",
+    "A terminal phase without calibrated server flag is rejected, preserving no false real-mode success",
+    "A delayed cancellation carries its old calibration ID and cannot invalidate a newly started wizard",
+    "Cancelling before the start response never sends an unidentified cancellation; late response cleans only its own ID while the new wizard remains active",
+    "Deferred native fullscreen begin is followed by queued cancellation before a new begin; its late completion cannot close the newer calibration",
+    "Phone policy is first-frame, teacher editor cannot imply configurable waiting, and participant/report labels distinguish phone, gaze, head and unknown reasons"
+  ],
+  "limitations": "Executed DOM and JavaScript against controlled native/API doubles. Does not validate physical Windows rendering, camera accuracy or native fullscreen implementation."
+}

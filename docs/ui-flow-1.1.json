@@ -1,0 +1,13 @@
+{
+  "teacher_editor_save": true,
+  "server_duration": true,
+  "live_start": true,
+  "stream_source_stable": true,
+  "mjpeg_chunks": 5,
+  "mjpeg_bytes": 47243,
+  "answer_saved": true,
+  "automatic_phone_dismissal": true,
+  "pin_unlock": true,
+  "js_errors": [],
+  "method": "jsdom DOM + real HTTP API; scripted camera, no browser rendering or physical webcam"
+}

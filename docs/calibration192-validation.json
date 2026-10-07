@@ -1,0 +1,17 @@
+{
+  "version": "1.9.2",
+  "date": "2026-10-05",
+  "python_suite": {
+    "passed": 569,
+    "skipped": 3,
+    "warnings": 1,
+    "seconds": 21.06
+  },
+  "skips": "Three opt-in real-model tests not run",
+  "warning": "Existing Starlette HTTPX adapter deprecation",
+  "scope": "Full Python suite; controlled data including low-FPS calibration recovery",
+  "limitations": [
+    "No physical user camera validation",
+    "No native Windows rendering or hardware test"
+  ]
+}

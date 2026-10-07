@@ -1,0 +1,4 @@
+# Windows shell. Uses the Microsoft Edge WebView2 Runtime.
+pywebview==6.1
+PyAutoGUI==0.9.54; sys_platform == "win32"
+PyGetWindow==0.0.9; sys_platform == "win32"

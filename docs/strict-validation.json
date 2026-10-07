@@ -1,0 +1,29 @@
+{
+  "version": "1.9.0",
+  "date": "2026-10-05",
+  "python_tests": {
+    "passed": 524,
+    "skipped": 3,
+    "warnings": 1,
+    "seconds": 21.14,
+    "command": "python -m pytest -q tests",
+    "skipped_reason": "Opt-in tests loading actual ONNX/MediaPipe models were not enabled.",
+    "warning": "Existing Starlette test-client HTTPX deprecation."
+  },
+  "covered": [
+    "first fresh recognized phone at score >=0.40; no delay or area restriction",
+    "first valid estimated gaze outside screen, including tiny boundary crossing",
+    "independent head deviation over 5 degrees in yaw, pitch or roll",
+    "stale, repeated and pre-armed frames do not terminate an attempt",
+    "12-target calibration, held-out validation, fullscreen geometry and unique generation IDs",
+    "saved answers, phone/gaze/head reason, teacher unlock and report exports",
+    "ordinary hub controls, calibration lease recovery and exam-only protection",
+    "native display placement and DPI checks via controlled native doubles"
+  ],
+  "not_measured": [
+    "Physical webcam detection accuracy or false positive rate",
+    "Physical Windows hotkeys, monitor switching, WebView2 rendering or native fullscreen",
+    "Reliability of recognizing an arbitrary tiny or occluded phone fragment"
+  ],
+  "risk": "Strict mode terminates on an estimated offscreen point without an uncertainty allowance. Measurement error can cause false terminations; this policy is not proof of cheating."
+}

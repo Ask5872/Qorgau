@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="qorgau-token" content="__CSRF_TOKEN__">
+  <meta name="theme-color" content="#ffffff">
+  <title>Qorgau — локальный прокторинг</title>
+  <link rel="stylesheet" href="/assets/style.css?v=calibration197">
+</head>
+<body data-role="choose">
+  <aside class="sidebar">
+    <a class="brand" href="#overview" aria-label="Qorgau — главная"><span class="brand-mark" aria-hidden="true">q</span><span class="brand-copy"><span>qorgau<span class="brand-dot">.</span></span><small class="brand-caption">ЛОКАЛЬНЫЙ ПРОКТОРИНГ</small></span></a>
+    <div class="workspace"><span class="workspace-icon" id="workspace-icon">У</span><div><strong id="workspace-title">Участник</strong><small id="workspace-sub">Подготовка и прохождение</small></div></div>
+    <div class="nav-label" id="nav-label">МОЙ ЭКЗАМЕН</div>
+    <nav id="nav" aria-label="Основная навигация"></nav>
+    <div class="side-bottom">
+    <button id="teacher-button" class="teacher"><span class="avatar">П</span><span><strong id="teacher-label">Преподаватель</strong><small id="teacher-sub">Войти по PIN</small></span><span id="teacher-arrow">↗</span></button></div>
+  </aside>
+  <div class="app-shell"><header class="topbar"><div class="breadcrumbs"><span id="workspace-crumb">Qorgau</span> <span>/</span> <b id="crumb">Обзор</b></div><div class="top-actions"><span class="cabinet-badge" id="cabinet-badge">Локальный прокторинг</span><span class="connection"><span class="dot"></span><span id="connection">Локальное подключение</span></span><button id="teacher-top" class="teacher-mobile icon-btn" data-action="choose-role" aria-label="Войти как преподаватель" title="Преподаватель"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg></button><div id="window-controls" class="window-controls" aria-label="Управление окном" hidden><button class="icon-btn" data-action="minimize-window" title="Свернуть окно" aria-label="Свернуть окно">−</button><button class="icon-btn" data-action="close-window" title="Закрыть приложение" aria-label="Закрыть приложение">×</button></div></div></header>
+    <div id="mode-banner" class="mode-banner" hidden></div><main id="main"></main>
+    <footer class="footer"><span>Qorgau · Qostanai Industry Hackathon 2026</span><span>Ответы и журнал сохраняются <span class="footer-dot">●</span> v1.9.7 · MONO</span></footer>
+  </div>
+  <dialog id="modal"><div id="modal-content"></div></dialog><div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="/assets/app.js?v=calibration197"></script>
+</body>
+</html>

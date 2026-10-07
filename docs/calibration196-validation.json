@@ -1,0 +1,59 @@
+{
+  "version": "1.9.6",
+  "date": "2026-10-05",
+  "python_suite": {
+    "passed": 627,
+    "skipped": 3,
+    "warnings": 1,
+    "seconds": 22.5
+  },
+  "skips": "Three opt-in real-model tests not run",
+  "warning": "Existing Starlette HTTPX adapter deprecation",
+  "calibration": {
+    "mode": "simple_5",
+    "total_points": 5,
+    "fit_points": 4,
+    "held_out_points": 1,
+    "samples_per_point": 6,
+    "settle_seconds": 0.45,
+    "minimum_sample_span_seconds": 0.45,
+    "automatic_quality_retries": false
+  },
+  "gaze_enforcement": {
+    "required_frames": 3,
+    "minimum_capture_span_seconds": 0.25,
+    "max_observation_gap_seconds": 3.0,
+    "max_capture_age_seconds": 1.0,
+    "uncertainty_considered": true,
+    "same_outside_edge_required": true,
+    "phone_and_head_still_first_valid_frame": true
+  },
+  "regressions": [
+    "Four corners train affine map; center is independent validation and neutral head pose",
+    "Small stable signal accepted; flat, noisy and invalid covariance data rejected; all five groups checked",
+    "Delayed Camera adapter with 1.1/2.5 second analysis latency completes five-point collection without reset",
+    "Isolated gaze spike, uncertain edge, blink, inside return and changing outside side cannot trigger gaze dismissal",
+    "Duplicate, stale, reversed or nonmonotonic captures interrupt pending confirmation without reopening replay guards",
+    "Outer runtime rejection interrupts pending gaze; capture sequence skips from latest-frame inference remain legal",
+    "Three consistent fresh observations over .25 seconds trigger gaze; low capture cadence uses three seconds gap separately from one second frame age",
+    "Phone/head immediate enforcement, evidence, stored answers and instructor entry block preserved",
+    "New, legacy strict, old non-strict and demo reports describe the saved policy"
+  ],
+  "ui_checks": {
+    "simple_calibration_groups": 11,
+    "lifecycle_groups": 13,
+    "includes": "Five points, one short instruction, no live technical clutter, collapsed error details, JSON privacy, stale-response guards, uncertainty wording and confirmed-gaze consent"
+  },
+  "independent_review": {
+    "runtime_tests_passed": 142,
+    "report_tests_passed": 4,
+    "blockers": 0
+  },
+  "limitations": [
+    "Synthetic camera observations; no physical user camera or native Windows verification",
+    "One held-out center covers fewer locations than the previous three held-out points",
+    "Measured uncertainty allowance is not a confidence probability and cannot guarantee zero false positives",
+    "Runtime still rejects capture age over one second; very slow analysis can prevent reliable enforcement even when calibration completes",
+    "Confirmation may take longer than .25 seconds depending on camera cadence and inference latency"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "created": "2026-10-02",
+  "files": [
+    {
+      "file": "yolov8n.onnx",
+      "bytes": 12824166,
+      "sha256": "995b30b9fd4586b53fda17edb1f945343a3be322560d5e1606891c5bbba98743"
+    },
+    {
+      "file": "face_landmarker.task",
+      "bytes": 3758596,
+      "sha256": "64184e229b263107bc2b804c6625db1341ff2bb731874b0bcc2fe6544e0bc9ff"
+    },
+    {
+      "file": "yolov8n-face.onnx",
+      "bytes": 12715424,
+      "sha256": "06b941fd5792be624ad18f2df9ede0a021c4df165dd418204d978c20fd555928",
+      "source": "https://github.com/akanametov/yolo-face/releases/download/1.0.0/yolov8n-face.onnx",
+      "source_repository": "https://github.com/akanametov/yolo-face/tree/1.0.0",
+      "source_license": "GPL-3.0 (author repository LICENSE)",
+      "model_license": "AGPL-3.0 (embedded ONNX metadata)",
+      "model_task": "face detection with 5 keypoints; MediaPipe supplies gaze landmarks",
+      "training_dataset": "WIDERFace (embedded ONNX metadata)",
+      "class_names": {
+        "0": "face"
+      }
+    }
+  ],
+  "updated": "2026-10-04"
+}

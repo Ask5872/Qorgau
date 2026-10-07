@@ -1,0 +1,43 @@
+{
+  "version": "1.9.5",
+  "date": "2026-10-05",
+  "python_suite": {
+    "passed": 609,
+    "skipped": 3,
+    "warnings": 1,
+    "seconds": 21.95
+  },
+  "skips": "Three opt-in real-model tests not run",
+  "warning": "Existing Starlette HTTPX adapter deprecation",
+  "regressions": [
+    "Small stable iris ranges .02/.04 rejected by 1.9.4 fixed minima now pass full fit, held-out validation and projected noise checks",
+    "Nearly constant noisy observations fail even when point medians produce perfect fit and validation",
+    "Scaling signal and noise together preserves acceptance and projected screen jitter",
+    "Full correlated covariance uses sample SD (ddof=1), not standard error of the mean",
+    "All twelve covariance matrices required; missing, nonfinite, asymmetric, negative or indefinite data rejected",
+    "Repeating one point replaces its covariance and preserves the other eleven",
+    "Training and held-out retry budgets and quality thresholds retained",
+    "Numerically constant or inseparable axes never create a profile",
+    "No raw per-frame features or covariance matrices exported in diagnostics"
+  ],
+  "ui_checks": {
+    "current_groups": 20,
+    "prior_lifecycle_groups": 13,
+    "includes": "Only actual measured quality rows displayed; zero preserved; empty limit-only table hidden; noise and range refusal differentiated; jitter and combined uncertainty displayed; feature ranges never labelled screen percentages; explicit diagnostic whitelist"
+  },
+  "independent_review": {
+    "targeted_tests_passed": 132,
+    "blockers": 0
+  },
+  "unchanged_from_1_9_4": [
+    "qorgau/gaze.py",
+    "qorgau/rules.py",
+    "qorgau/vision.py",
+    "web/style.css"
+  ],
+  "limitations": [
+    "Synthetic camera observations; no physical user camera validation",
+    "No native Windows rendering or hardware test",
+    "Screenshot identifies early range refusal but cannot establish actual signal-to-noise ratio on user camera"
+  ]
+}

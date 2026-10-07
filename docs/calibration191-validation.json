@@ -1,0 +1,22 @@
+{
+  "version": "1.9.1",
+  "date": "2026-10-05",
+  "tests": {
+    "passed": 552,
+    "skipped": 3,
+    "warnings": 1,
+    "seconds": 20.98
+  },
+  "ui_groups": 8,
+  "ui_regressions": 13,
+  "reproduced": [
+    "2 FPS and regular blinks previously prevented 8 consecutive samples; all12 targets now complete",
+    "Dark background previously rejected adequately lit face; face ROI exposure distinguishes them",
+    "No-frame analysis could leave wizard active past deadline; status polling now expires it",
+    "Same last validation point can be retried with a new acknowledgement"
+  ],
+  "limitations": [
+    "Synthetic input and DOM/API doubles; no physical webcam or native Windows measurement",
+    "Final calibration accuracy gates and strict exam limits are retained"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-02",
+  "platform": "Linux x86_64",
+  "python": "3.12.14",
+  "tests": {
+    "total": 12,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "browser": {
+    "engine": "Chromium 134",
+    "flow": "start, answer, simulated phone + second face, finish, instructor login, dismiss event, export JSON",
+    "passed": true,
+    "javascript_errors": 0,
+    "desktop_width": 1440,
+    "mobile_width": 390,
+    "mobile_horizontal_overflow": false,
+    "standalone_mobile_flow": "passed: start, answer, simulated phone, finish, PIN 2026, HTML export; zero JS errors and no page overflow"
+  },
+  "vision": {
+    "blank_frame": "0 faces, 0 phones",
+    "portrait": "1 face",
+    "double_portrait": "2 faces",
+    "clear_phone": "1 phone, confidence 0.919",
+    "hard_coco128_frames": "0 phone detections on 5 phone-annotated frames at threshold 0.40",
+    "camera_pipeline": "file-backed capture: 30-frame calibration, neutral gaze, JPEG frames and cleanup passed"
+  },
+  "not_tested": [
+    "Physical webcam capture",
+    "Windows keyboard hook and focus enforcement",
+    "Real user gaze accuracy",
+    "Representative detector precision and recall",
+    "Target laptop performance"
+  ],
+  "preview_fix": {
+    "date": "2026-10-03",
+    "javascript_disabled": "visible initial screen and viewer instructions; no overflow at 390 px",
+    "javascript_enabled": "exam start, answer, simulated phone, finish passed; zero JS errors"
+  }
+}

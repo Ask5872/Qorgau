@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "checks": [
+    "initial chooser separates participant and PIN-protected teacher entry",
+    "student has only preparation, own exam and rules; direct hashes and teacher actions blocked",
+    "wrong PIN remains in login dialog with visible error",
+    "successful PIN opens teacher-only editor and report navigation",
+    "unsaved draft prompts; handoff revokes server token, clears private memory and opens student",
+    "expired teacher access clears private editor and returns chooser safely",
+    "teacher config response arriving after handoff cannot restore private draft",
+    "evidence blob arriving after handoff cannot open private modal",
+    "imported file resolving after handoff cannot restore teacher draft",
+    "running live exam blocks switching roles, PIN entry and teacher navigation; emergency exit remains"
+  ],
+  "limitations": "DOM with controlled API responses; backend authorization is verified separately, no Windows/browser geometry validation"
+}

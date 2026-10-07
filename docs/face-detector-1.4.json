@@ -1,0 +1,167 @@
+{
+  "version": "1.4",
+  "date": "2026-10-04",
+  "purpose": "Real local CPU model smoke tests and face fusion check; not webcam accuracy or identity verification. No images are bundled.",
+  "model": {
+    "path": "models/yolov8n-face.onnx",
+    "sha256": "06b941fd5792be624ad18f2df9ede0a021c4df165dd418204d978c20fd555928",
+    "source": "https://github.com/akanametov/yolo-face/releases/download/1.0.0/yolov8n-face.onnx",
+    "metadata": {
+      "description": "Ultralytics YOLOv8n-pose model trained on /ssd2t/derron/ultralytics/ultralytics/datasets/widerface.yaml",
+      "version": "8.3.241",
+      "names": {
+        "0": "face"
+      },
+      "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+      "input": [
+        1,
+        3,
+        640,
+        640
+      ],
+      "output": [
+        1,
+        300,
+        21
+      ]
+    },
+    "repository_license_url": "https://raw.githubusercontent.com/akanametov/yolo-face/1.0.0/LICENSE",
+    "repository_license": "GPL-3.0"
+  },
+  "runtime": {
+    "provider": "CPUExecutionProvider",
+    "intra_op_threads": 2,
+    "inter_op_threads": 1
+  },
+  "samples": [
+    {
+      "input": "uniform gray BGR 1280x720 value120",
+      "faces": 0,
+      "yolo_face_count": 0,
+      "landmark_faces": 0,
+      "analysis_ms": [
+        144.9,
+        162.5,
+        139.5,
+        117.9,
+        133.2,
+        137.2,
+        117.8,
+        116.5
+      ]
+    },
+    {
+      "source": "https://raw.githubusercontent.com/akanametov/yolo-face/dev/examples/face.jpg",
+      "sha256": "645697aca0844287e3b61bf046fada55b2d2a258010072eab5632cf73aa02fba",
+      "input": "public author crowd sample, full image, no redistribution",
+      "faces": 16,
+      "yolo_face_count": 16,
+      "landmark_faces": 0,
+      "count_limit": 16,
+      "analysis_ms": 115.7
+    },
+    {
+      "source": "https://storage.googleapis.com/mediapipe-assets/portrait.jpg",
+      "sha256": "a6f11efaa834706db23f275b6115058fa87fc7f14362681e6abe14e82749de3e",
+      "input": "public MediaPipe portrait resized to600pixels height; also horizontal duplicate for two-face association test",
+      "results": [
+        {
+          "name": "portrait",
+          "shape": [
+            600,
+            480,
+            3
+          ],
+          "ms": 156.9,
+          "faces": 1,
+          "yolo_face_count": 1,
+          "landmark_faces": 1,
+          "landmarks_valid": true,
+          "face_detections": [
+            {
+              "box": [
+                179,
+                39,
+                113,
+                164
+              ],
+              "confidence": 0.8922,
+              "source": "yolov8n-face+mediapipe",
+              "landmark_index": 0
+            }
+          ]
+        },
+        {
+          "name": "two_copies",
+          "shape": [
+            600,
+            960,
+            3
+          ],
+          "ms": 143.1,
+          "faces": 2,
+          "yolo_face_count": 2,
+          "landmark_faces": 2,
+          "landmarks_valid": true,
+          "face_detections": [
+            {
+              "box": [
+                660,
+                40,
+                111,
+                163
+              ],
+              "confidence": 0.8729,
+              "source": "yolov8n-face+mediapipe",
+              "landmark_index": 1
+            },
+            {
+              "box": [
+                180,
+                40,
+                111,
+                163
+              ],
+              "confidence": 0.8726,
+              "source": "yolov8n-face+mediapipe",
+              "landmark_index": 0
+            }
+          ]
+        }
+      ],
+      "gaze_features_single_portrait": {
+        "eye_open": true,
+        "eye_features_valid": true,
+        "eye_visible_count": 2,
+        "iris_x": 0.5098,
+        "iris_y": 0.4962,
+        "yaw": 1.68,
+        "pitch": 5.02,
+        "method": "Actual VisionModels.analyze() outputs after local eye-axis extraction; checked by gaze audit worker."
+      },
+      "stationary_calibration": {
+        "fixture": "official MediaPipe portrait; same still repeated through 30 complete VisionModels.analyze() calls, not live-camera accuracy",
+        "frames": 30,
+        "elapsed_s": 4.747,
+        "samples_accepted": 30,
+        "baseline": [
+          1.683904928910124,
+          5.024592647594545,
+          0.509847255532608,
+          0.4961772762840155,
+          0.4736312607484327
+        ],
+        "calibration_progress": 100,
+        "calibrated": true,
+        "calibrating": false,
+        "gaze_direction": "center",
+        "gaze_valid": true,
+        "eye_open": true,
+        "eye_visible_count": 2,
+        "head_yaw": 0.0,
+        "head_pitch": 0.0
+      }
+    }
+  ],
+  "interpretation": "Single portrait counted once across both detectors; duplicate portraits counted twice rather than four times. The public crowd sample reaches the implementation cap of16faces. Samples do not validate live second-person accuracy, presentation-attack resistance or gaze accuracy. Camera preview uses a separate worker, but actual preview performance must be measured on target Windows hardware."
+}

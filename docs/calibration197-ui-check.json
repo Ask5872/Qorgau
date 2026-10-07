@@ -1,0 +1,13 @@
+{
+  "version": "1.9.7",
+  "date": "2026-10-06",
+  "status": "passed",
+  "checks": [
+    "JavaScript syntax check passed with Node.js",
+    "Self-contained preview contains the 1.9.7 footer and calibration wizard text",
+    "JSDOM smoke render shows the role chooser, separate participant entry and separate teacher entry",
+    "JSDOM smoke render contains no green/yellow status emoji in the initial monochrome screen",
+    "Preview build completed from web/index.html, web/app.js and web/style.css"
+  ],
+  "limitations": "The smoke render uses a controlled DOM environment. Physical WebView2/Windows rendering and camera accuracy still require manual acceptance on the target laptop."
+}

@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "checks": [
+    "five participant-relative directions",
+    "signed neutral-relative head angles",
+    "unavailable gaze for closed eyes, stale analysis, missing or multiple faces, missing calibration and invalid gaze",
+    "invalid metrics never shown as neutral",
+    "calibration starts at zero percent",
+    "teacher-only gaze delay and legacy JSON default",
+    "student cannot disable gaze or edit delay",
+    "live exam direction and complete guard status",
+    "navigation guard failure is shown",
+    "connection loss clears stale observations and reconnect restores them",
+    "MJPEG identity preserved",
+    "demo remains separate",
+    "left/right events and legacy reports",
+    "browser shortcut fallback covers tab switching and Russian keyboard layout; CtrlAltDelete and normal typing pass through"
+  ],
+  "limitations": "DOM integration only; physical camera accuracy and Windows enforcement require acceptance checks"
+}

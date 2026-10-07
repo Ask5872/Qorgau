@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "checks": [
+    "Preparation names five points; live wizard shows one point count, target, one short instruction and five checkpoints without FPS/timers/quality tables or percentage counters",
+    "Center and four corners advance through five targets with one painted-target acknowledgement each; no automatic repeat or extra calibration start",
+    "Frame-count fluctuations and blinking never erase saved checkpoints; a persistent blocker replaces the single instruction without adding diagnostic clutter",
+    "An older same-session revision cannot rewind the target",
+    "Only confirmed server success closes both fullscreen layers and shows the short setup-complete message",
+    "Failure is short with a specific cause; measured quality and JSON are inside collapsed details, limits-only tables stay hidden, precision and private bounded diagnostics are retained",
+    "A second five-point attempt starts only after the explicit retry action; cancellation retains the diagnostic on preparation",
+    "Older state replies and errors that finish after a new calibration starts cannot cancel it; fresh replies still advance the new five-point wizard",
+    "A genuine server-side calibration replacement still ends setup visibly",
+    "Boundary uncertainty is not displayed as confirmed outside-screen gaze; consent, teacher settings and submitted exam configuration match confirmed gaze while phone/head remain immediate",
+    "CSSOM keeps the compact central instruction below the target with a 60px gap and scroll bound; five checkpoints use a dynamic grid on laptop and scaled viewport sizes (no pixel rendering)"
+  ],
+  "limitations": "Executed DOM/CSSOM and JavaScript against controlled camera, clock and API/native doubles; no physical Windows rendering or camera accuracy test."
+}

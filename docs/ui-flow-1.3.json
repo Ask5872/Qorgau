@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "checks": [
+    "observed object categories and duplicates",
+    "model confidence separated from paper heuristic",
+    "unknown labels excluded",
+    "MJPEG identity stable across dynamic updates and render",
+    "possible-photo stage and uncertainty",
+    "reason labels whitelist",
+    "stale signals cleared",
+    "objects and emergency exit visible in active exam",
+    "exam navigation confined",
+    "demo tools clearly separate"
+  ],
+  "limitations": "DOM integration only; no physical camera or native Windows test"
+}

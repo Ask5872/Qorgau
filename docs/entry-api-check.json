@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "checks": [
+    "session requires participant entry",
+    "blank or missing name/group and extra authority fields rejected",
+    "participant entry trims and stores name/group with no teacher privileges",
+    "start uses bound participant identity and instructor policy despite forged request fields",
+    "active attempt prevents profile replacement or reset",
+    "reset clears active entry and own result while preserving teacher report and answer",
+    "different participant name and role reset cannot bypass phone dismissal block"
+  ],
+  "method": "real HTTP FastAPI and database with scripted camera, no Windows guard or physical webcam"
+}

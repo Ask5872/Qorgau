@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "checks": [
+    "Version and current point visible; total progress uses completed points, target has no misleading percentage",
+    "Current-point inlier sample fluctuations cannot erase global checkpoints or rewind total bar",
+    "Blink debounce and actionable persistent blocker kept; saved points unchanged",
+    "Real unfinished-point restart explained; old restart message not carried onto new point",
+    "Legitimate backwards validation retry re-acknowledges target, labels retry and retains all saved checkpoints",
+    "fit_retry stays unblocked initially and after700ms; selective training retry is labelled as setup, retains 12 saved checkpoints and 99% pending status; a repeated attempt on the same point receives a fresh target acknowledgement without restarting the session",
+    "Older same-ID revision cannot move target or saved count backwards",
+    "Low capture cadence is explained without claiming faster analysis; saved checkpoints stay visible, and allowed cadence/window/frame-age/analysis-ms metrics enter diagnostics",
+    "Calm low-cadence explanation stays on the same point instead of flashing when rates cross the threshold",
+    "Unknown, one-frame and zero cadence do not create fake rates or division results; backend expanded sample window independently explains slow collection",
+    "Bounded 90-snapshot diagnostic export is available on failure, excludes names/PIN/tokens/IDs/images/paths and raw errors",
+    "GET state begun before calibration cannot falsely cancel new wizard when its old reply or failure arrives after POST; cancelled run keeps diagnostic on preparation screen",
+    "A genuinely replaced server calibration still stops visibly; stale-response guard does not hide real replacement",
+    "Fit failure after all12 captures explains measurement accuracy without blaming gaze/head; only available measured and allowed percentages are shown, and quality diagnostics omit all unknown nested information",
+    "Combined uncertainty12% versus allowed10% explains rejection when RMS4% and held-out error8% separately pass; absent uncertainty is neither calculated nor fabricated in the UI",
+    "Four-decimal percent precision keeps slightly excessive .07501/.14001 errors visibly distinct from .075/.14 limits; RMS label matches the actual metric",
+    "All explicit quality-failure codes are recognized; partial metrics never invent limits or validation results, invalid scalar/list values are excluded from display and diagnostics",
+    "CSSOM proves central coach starts 60 CSS pixels below the actual target with bounded bottom and scroll overflow, no short-screen rule overrides its top; geometry checked at1366×768,1280×720,1067×600,911×512 (no pixel rendering)"
+  ],
+  "limitations": "JavaScript/DOM integration with controlled camera, HTTP ordering, clock and native bridge; no physical camera or Windows rendering test."
+}

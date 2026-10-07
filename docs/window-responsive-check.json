@@ -1,0 +1,188 @@
+{
+  "checks": 36,
+  "viewports": 6,
+  "grayscaleColors": 350,
+  "limitations": "CSSOM media rules and DOM contracts only; jsdom does not lay out pixels. No Windows/WebView2 visual validation claimed.",
+  "results": [
+    {
+      "viewport": "1366x768",
+      "page": "choose",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "1366x768",
+      "page": "student-login",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "1366x768",
+      "page": "teacher-login",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "1366x768",
+      "page": "student",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "1366x768",
+      "page": "teacher",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "1366x768",
+      "page": "exam",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "1280x720",
+      "page": "choose",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "1280x720",
+      "page": "student-login",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "1280x720",
+      "page": "teacher-login",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "1280x720",
+      "page": "student",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "1280x720",
+      "page": "teacher",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "1280x720",
+      "page": "exam",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "1093x614",
+      "page": "choose",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "1093x614",
+      "page": "student-login",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "1093x614",
+      "page": "teacher-login",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "1093x614",
+      "page": "student",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "1093x614",
+      "page": "teacher",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "1093x614",
+      "page": "exam",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "911x512",
+      "page": "choose",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "911x512",
+      "page": "student-login",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "911x512",
+      "page": "teacher-login",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "911x512",
+      "page": "student",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "911x512",
+      "page": "teacher",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "911x512",
+      "page": "exam",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "620x370",
+      "page": "choose",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "620x370",
+      "page": "student-login",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "620x370",
+      "page": "teacher-login",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "620x370",
+      "page": "student",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "620x370",
+      "page": "teacher",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "620x370",
+      "page": "exam",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "360x640",
+      "page": "choose",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "360x640",
+      "page": "student-login",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "360x640",
+      "page": "teacher-login",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "360x640",
+      "page": "student",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "360x640",
+      "page": "teacher",
+      "status": "CSS and DOM contract passed"
+    },
+    {
+      "viewport": "360x640",
+      "page": "exam",
+      "status": "CSS and DOM contract passed"
+    }
+  ]
+}

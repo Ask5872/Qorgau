@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "checks": [
+    "Chooser, both login pages, participant preparation and teacher home leave Alt+Tab, copy/paste, Win, PrintScreen and ordinary window opening untouched",
+    "Normal idle desktop advertises protection at test start and permits start consent despite no active isolation",
+    "Normal hub remains unrestricted while child exam runs, shows no duplicate answers and emits no false hidden/focus/shortcut events",
+    "Active child exam blocks browser shortcuts, clipboard/context actions and window opening, records observations and retains emergency exit",
+    "Completion immediately stops browser-level prevention and proctor event emission",
+    "Interface demo remains unrestricted",
+    "Exam native heartbeat follows a successful state/heartbeat refresh and is not renewed when backend communication fails",
+    "Exam readiness reaches native bridge before initial state request to avoid protected-start deadlock"
+  ],
+  "limitations": "jsdom executed current source with controlled API/native bridge. Does not validate physical Windows desktop switching, keyboard hooks or rendered geometry."
+}

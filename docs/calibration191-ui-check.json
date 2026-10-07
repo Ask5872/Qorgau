@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "checks": [
+    "Point percent, retained sample count, required time span, timeout and analysis FPS are visible; ring mirrors server point progress",
+    "A single short blink keeps visible progress and does not produce eye or distance corrective advice",
+    "Persistent eye visibility issue is explained after 700 ms; successful data clears the paused state and stale advice immediately",
+    "Alternating light/eyes/head rejection frames are debounced; only a stable blocker produces a corrective instruction",
+    "Persistent missing face, multiple faces, head movement, pose failure, missing eyes and slow analysis show distinct actionable explanations",
+    "Server calibration issue remains authoritative instead of recreating a frame-background light rejection in the UI",
+    "Repeating the same held-out validation point re-acknowledges a freshly painted target using point_retry and retains the existing session",
+    "Failure preserves exact server reason and point count without recycling an old head/light blocker"
+  ],
+  "limitations": "JavaScript/DOM integration with controlled camera, clock and native bridge; no physical camera or Windows rendering test."
+}

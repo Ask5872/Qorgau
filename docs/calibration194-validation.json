@@ -1,0 +1,40 @@
+{
+  "version": "1.9.4",
+  "date": "2026-10-05",
+  "python_suite": {
+    "passed": 593,
+    "skipped": 3,
+    "warnings": 1,
+    "seconds": 22.38
+  },
+  "skips": "Three opt-in real-model tests not run",
+  "warning": "Existing Starlette HTTPX adapter deprecation",
+  "new_regressions": [
+    "High-leverage wrong training point selected for fresh remeasurement; remaining 11 groups preserved",
+    "All nine training points refitted and all three independent points validated after repair",
+    "No profile on persistent bad fit, bad held-out validation, constant gaze or degenerate fit",
+    "Training retries bounded at two per point and three per wizard",
+    "Repeated center measurements cannot walk neutral head pose away from initial reference",
+    "Fresh target acknowledgement and post-settle capture required on retry",
+    "Failure quality diagnostics retain numeric fit, validation and point error metrics"
+  ],
+  "ui_checks": {
+    "current_groups": 18,
+    "prior_lifecycle_groups": 13,
+    "includes": "Training retry not treated as blocker; same-point retry re-ack; numeric metric whitelist; threshold precision; combined uncertainty failure shown; privacy negative cases"
+  },
+  "independent_review": {
+    "targeted_tests_passed": 116,
+    "blockers": 0
+  },
+  "unchanged_from_1_9_3": [
+    "qorgau/gaze.py",
+    "qorgau/rules.py",
+    "qorgau/vision.py"
+  ],
+  "limitations": [
+    "Synthetic camera observations; no physical user camera validation",
+    "No native Windows rendering or hardware test",
+    "Screenshot identifies fit-error branch but does not establish cause of user measurement error"
+  ]
+}

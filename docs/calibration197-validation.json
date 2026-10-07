@@ -1,0 +1,53 @@
+{
+  "version": "1.9.7",
+  "date": "2026-10-06",
+  "python_suite": {
+    "passed": 680,
+    "skipped": 3,
+    "warnings": 1,
+    "seconds": 23.59
+  },
+  "skips": "Three opt-in real-model tests were not run",
+  "warning": "Existing Starlette HTTPX adapter deprecation",
+  "calibration": {
+    "mode": "simple_5",
+    "total_points": 5,
+    "fit_points": 4,
+    "held_out_points": 1,
+    "samples_per_point": 6,
+    "settle_seconds": 0.45,
+    "minimum_sample_span_seconds": 0.45,
+    "optional_start": true,
+    "accepted_checkpoints_survive_cancel_failure_timeout": true,
+    "automatic_quality_retries": false
+  },
+  "capability_modes": {
+    "full": "gaze confirmation and head control",
+    "partial": "approximate gaze observation only; head control when a neutral point exists",
+    "none": "phone, face monitoring and exam-window protection remain available; no gaze/head auto-stop"
+  },
+  "gaze_enforcement": {
+    "required_frames": 3,
+    "minimum_capture_span_seconds": 0.25,
+    "max_observation_gap_seconds": 3.0,
+    "uncertainty_considered": true,
+    "same_outside_edge_required": true,
+    "partial_profile_never_auto_disqualifies": true,
+    "phone_and_head_still_first_valid_frame": true
+  },
+  "regressions": [
+    "Zero-point, partial, failed and full starts preserve only the capabilities actually available at session start",
+    "Accepted calibration groups survive cancel, failure and timeout; unfinished samples are discarded",
+    "A partial or approximate gaze signal cannot trigger gaze removal, while a saved center can control head pose independently",
+    "Phone removal remains independent of calibration and uses the first fresh recognized frame",
+    "A later full-looking camera state cannot upgrade a partial session",
+    "Reports describe the saved calibration mode and accepted point count, including historical reports",
+    "A participant reset clears the previous calibration; a stale cancellation ID cannot affect a newer calibration"
+  ],
+  "limitations": [
+    "Synthetic camera observations; no physical user camera or native Windows verification",
+    "Approximate partial gaze is observation-only and does not prove where a person looked",
+    "Measured uncertainty is not a confidence probability and cannot guarantee zero false positives",
+    "Actual FPS and model behavior depend on the user's camera, drivers and laptop"
+  ]
+}

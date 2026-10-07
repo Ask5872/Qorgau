@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "checks": [
+    "Version and current point visible; total progress uses completed points, target has no misleading percentage",
+    "Current-point inlier sample fluctuations cannot erase global checkpoints or rewind total bar",
+    "Blink debounce and actionable persistent blocker kept; saved points unchanged",
+    "Real unfinished-point restart explained; old restart message not carried onto new point",
+    "Legitimate backwards validation retry re-acknowledges target, labels retry and retains all saved checkpoints",
+    "Older same-ID revision cannot move target or saved count backwards",
+    "Low capture cadence is explained without claiming faster analysis; saved checkpoints stay visible, and allowed cadence/window/frame-age/analysis-ms metrics enter diagnostics",
+    "Calm low-cadence explanation stays on the same point instead of flashing when rates cross the threshold",
+    "Unknown, one-frame and zero cadence do not create fake rates or division results; backend expanded sample window independently explains slow collection",
+    "Bounded 90-snapshot diagnostic export is available on failure, excludes names/PIN/tokens/IDs/images/paths and raw errors",
+    "GET state begun before calibration cannot falsely cancel new wizard when its old reply or failure arrives after POST; cancelled run keeps diagnostic on preparation screen",
+    "A genuinely replaced server calibration still stops visibly; stale-response guard does not hide real replacement",
+    "CSSOM proves central coach starts 60 CSS pixels below the actual target with bounded bottom and scroll overflow, no short-screen rule overrides its top; geometry checked at1366×768,1280×720,1067×600,911×512 (no pixel rendering)"
+  ],
+  "limitations": "JavaScript/DOM integration with controlled camera, HTTP ordering, clock and native bridge; no physical camera or Windows rendering test."
+}

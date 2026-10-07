@@ -1,0 +1,20 @@
+{
+  "version": "1.9.3",
+  "date": "2026-10-05",
+  "python_suite": {
+    "passed": 582,
+    "skipped": 3,
+    "warnings": 1,
+    "seconds": 22.32
+  },
+  "skips": "Three opt-in real-model tests not run",
+  "warning": "Existing Starlette HTTPX adapter deprecation",
+  "new_regressions": "Serial 1.1s/2.5s analysis latency and 0.5 FPS capture failed before the fix, complete all 12 points after fix",
+  "camera_adapter_tests": "Two timing cases pass through real Camera calibration methods and state publication with synthetic observations",
+  "ui_checks": "13 new DOM/CSSOM groups; 13 prior wizard lifecycle groups",
+  "independent_review": "105 calibration/recovery tests; delayed pre-target and pre-settle frames rejected; constant gaze across targets rejected at slow cadence; strict rules unchanged",
+  "limitations": [
+    "Synthetic camera observations; no physical user camera validation",
+    "No native Windows rendering or hardware test"
+  ]
+}

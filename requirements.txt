@@ -1,0 +1,10 @@
+# CPU runtime. Versions used during validation, 2026-10-02.
+fastapi==0.142.2
+uvicorn==0.54.0
+pydantic==2.13.5
+starlette==1.7.0
+anyio==4.15.1
+numpy==2.5.3
+opencv-contrib-python==5.0.0.93
+mediapipe==1.0.1
+onnxruntime==1.30.0

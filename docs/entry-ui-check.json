@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "checks": [
+    "minimal chooser has distinct participant and teacher entry with no help or simulation controls",
+    "direct participant route is a full page with required name and group",
+    "participant login opens own preparation/test only without teacher editor or raw CV telemetry",
+    "participant cannot use direct teacher hashes or teacher actions",
+    "start uses previously entered identity and fixed instructor policy with only consent choices",
+    "direct teacher route is a full PIN page and wrong PIN keeps visible error",
+    "valid PIN alone opens teacher editor, journal and report navigation",
+    "role transition clears private DOM and shows a noninteractive loading state until reset finishes",
+    "teacher handoff confirms unsaved work, revokes token, clears private state and requires fresh participant entry",
+    "expired teacher token clears private editor safely",
+    "teacher config response arriving after handoff cannot restore private draft",
+    "evidence blob arriving after handoff cannot open private modal",
+    "imported file resolving after handoff cannot restore teacher draft",
+    "abandoned PIN login response cannot reopen teacher cabinet",
+    "abandoned participant entry response cannot restore old identity",
+    "start request carries the bound participant identity from entry",
+    "running live exam blocks switching roles and teacher entry while retaining emergency exit"
+  ],
+  "limitations": "DOM with controlled API responses; backend identity/authorization verified separately, no Windows enforcement or rendered browser geometry"
+}
